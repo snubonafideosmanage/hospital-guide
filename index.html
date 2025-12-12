@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>병원 안내문 - 반듯한정형외과</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .category-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .category-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .category-desc {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .category-count {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 20px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 병원 안내문</h1>
+            <p>반듯한정형외과 환자 안내 자료</p>
+        </header>
+
+        <div class="categories">
+            <a href="injection-precautions.html" class="category-card">
+                <div class="category-icon">💉</div>
+                <div class="category-title">주사치료 주의사항</div>
+                <div class="category-desc">주사치료 후 반드시 지켜야 할 주의사항을 확인하세요</div>
+                <span class="category-count">1개 안내문</span>
+            </a>
+
+            <a href="body-parts.html" class="category-card">
+                <div class="category-icon">🦴</div>
+                <div class="category-title">부위별 치료 안내</div>
+                <div class="category-desc">어깨, 팔꿈치, 손목, 허리, 무릎 등 부위별 치료 정보</div>
+                <span class="category-count">10개 안내문</span>
+            </a>
+
+            <a href="non-covered.html" class="category-card">
+                <div class="category-icon">💰</div>
+                <div class="category-title">비급여 항목 안내</div>
+                <div class="category-desc">건강보험 적용이 안 되는 치료 항목 및 비용 정보</div>
+                <span class="category-count">2개 안내문</span>
+            </a>
+
+            <a href="bone-injection.html" class="category-card">
+                <div class="category-icon">🩺</div>
+                <div class="category-title">뼈주사 안내</div>
+                <div class="category-desc">신경치료 주사에 대한 상세 정보</div>
+                <span class="category-count">1개 안내문</span>
+            </a>
+        </div>
+
+        <footer>
+            <p>반듯한정형외과 BONAFIDE ORTHOPEDIC CLINIC</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">궁금한 사항은 병원에 문의해주세요</p>
+        </footer>
+    </div>
+</body>
+</html>
